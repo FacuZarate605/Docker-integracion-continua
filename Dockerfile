@@ -14,4 +14,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY src/ /src
 
 # Comando por defecto para ejecutar tu aplicación (ajusta según sea necesario)
-CMD ["python", "src/app.py"]
+CMD ["python", "app/app.py"]
