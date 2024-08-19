@@ -119,7 +119,8 @@ app.register_blueprint(fichas)
 
 print(DATABASE_CONNECTION_URI)
 app.secret_key = '*0984632'
-app.config["SQLALCHEMY_DATABASE_URI"] = DATABASE_CONNECTION_URI
+# app.config["SQLALCHEMY_DATABASE_URI"] = DATABASE_CONNECTION_URI
+app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql+pymysql://root:root@mysql-container/flaskmysql'
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 # no cache
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
